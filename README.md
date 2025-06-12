@@ -6,21 +6,21 @@ Investment Calculator project repository
 
 Installation
 ------------
-VITE v4.5.14
-Node.js v20.17.0
+REACT v19.0.0 <br>
+VITE v4.5.14 <br>
+Node.js v20.17.0 <br>
 
-`npm install`
-`npm run dev`
-Local:   `http://localhost:5173/`
+`npm install` <br>
+`npm run dev` <br>
+ > Local:   `http://localhost:5173/` <br>
 
 Development
 -----------
-Two branchs: `main` | `dev`
-Branch off of `main` named `dev`
-*Commits* to `dev` branch
-*PRs* from `dev` to `main`
-*Merging* to `main` branch
+Two branches: `main` | `dev` <br>
+Branch off of `main` named `dev` <br>
+__Commits__ to `dev` branch <br>
+__PR__ from `dev` to `main` <br>
+__Merging__ to `main` branch <br>
 
 Deployment
 ----------
-
