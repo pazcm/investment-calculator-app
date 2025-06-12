@@ -7,24 +7,24 @@ export default function UserInput({ onChangeInput, userInput }) {
     return <section id="user-input">
         <div className="input-group">
             <p>
-                <lable>Initial Investment Amount</lable>
+                <label>Initial Investment Amount</label>
                     <input type="number" required value={userInput.initialInvestment}
                     onChange={(event) => onChangeInput('initialInvestment', event.target.value)} />
             </p>
             <p>
-                <lable>Annual Investment</lable>
+                <label>Annual Investment</label>
                     <input type="number" required value={userInput.annualInvestment}
                     onChange={(event) => onChangeInput('annualInvestment', event.target.value)}  />
             </p>
         </div>
         <div className="input-group">
             <p>
-                <lable>Expected Return</lable>
+                <label>Expected Return</label>
                 <input type="number" required value={userInput.expectedReturn}
                     onChange={(event) => onChangeInput('expectedReturn', event.target.value)}  />
             </p>
              <p>
-                <lable>Investment Duration</lable>
+                <label>Investment Duration</label>
                 <input type="number" required value={userInput.investmentDuration}
                     onChange={(event) => onChangeInput('investmentDuration', event.target.value)}  />
             </p>
