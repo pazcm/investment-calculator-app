@@ -3,7 +3,9 @@ import UserInput from './components/UserInput.jsx';
 
 function App() {
   return  (
-   
+    <>
+      < Header />
+    </>
   );
 }
 
