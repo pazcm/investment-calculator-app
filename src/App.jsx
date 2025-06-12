@@ -11,7 +11,9 @@ function App() {
       expectedReturn: 4,
       investmentDuration: 10,
   });
-
+  // if the investment Duration is at least 1 year, the input is valid
+  const inputIsValid = userInput.investmentDuration >= 1;
+    
   // function to handle input changes
   // so this function is called as a prop in the UserInput component * see line 28
   function handleChange(inputId, newValue) {
@@ -27,8 +29,14 @@ function App() {
     <>
       < Header />
       < UserInput userInput={userInput} onChangeInput={handleChange} />
-      {/* results table goes here */}
-      < Results input={userInput} />
+      {/* if the input is not valid, show a message */}
+      {!inputIsValid && (
+        <p className="error">
+          Please enter a valid duration (at least 1 year).
+        </p>
+      )}
+      {/* if the input is valid, show the results */}
+      {inputIsValid && < Results input={userInput} />}
     </>
   );
 }
