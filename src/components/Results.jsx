@@ -2,11 +2,11 @@
 // It will get the user input as an input here instead of the UserInput component,
 // so that the results can be calculated and displayed dynamically.
 // and derive the results from the input prop here (= user input state) -> computing values based on state
-import { calculateInvestmentResults, formatter } from "../util/investment";
+import { calculateInvestmentResults, formatter } from '../util/investment.js';
 
 export default function Results({ input }) {
     const resultsData = calculateInvestmentResults(input); // it will be an of object *see util/investment.js line 7
-    // console.log(resultsData);
+    // dereive initial investment
     const initialInvestment = resultsData[0].valueEndOfYear - resultsData[0].interest - resultsData[0].annualInvestment;
 
     return (
@@ -22,7 +22,7 @@ export default function Results({ input }) {
             </thead>
             <tbody>
                 {resultsData.map((yearData) => {
-                   const totalInterest = yearData.valueEndOfYear - yearData.annualInvestment * yearData.year;
+                   const totalInterest = yearData.valueEndOfYear - yearData.annualInvestment * yearData.year - initialInvestment;
                    const totalAmountInvested = yearData.valueEndOfYear - totalInterest;
 
                    return (
