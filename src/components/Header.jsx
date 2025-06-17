@@ -1,4 +1,4 @@
-import logo from '../assets/money-grow.png';
+import logo from '../assets/money-grow-logo.png';
 
 export default function Header() {
     return (

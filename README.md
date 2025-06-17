@@ -24,3 +24,12 @@ __Merging__ to `main` branch <br>
 
 Deployment
 ----------
+### Deployed to GitHub Pages using GitHub Actions >
+**1. `vite.config.js` updated** > ensure all asset paths will be correct when served from GitHub Pages. <br>
+**2. GitHub Actions workflow added**> file created at `.github/workflows/deploy.yml` <br>
+**3. GitHub Pages configured**<br>
+
+---
+
+> [Investment Calculator App](https://pazcm.github.io/investment-calculator-app/)
+
