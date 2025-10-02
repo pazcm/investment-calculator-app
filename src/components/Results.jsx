@@ -9,6 +9,10 @@ export default function Results({ input }) {
     // dereive initial investment
     const initialInvestment = resultsData[0].valueEndOfYear - resultsData[0].interest - resultsData[0].annualInvestment;
 
+    // if (resultsData.length === 0) {
+    //     return <p className="error">Please enter valid duration.</p>;
+    // }
+
     return (
         <table id="result">
             <thead>

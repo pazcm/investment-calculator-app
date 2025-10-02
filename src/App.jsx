@@ -1,11 +1,16 @@
 import Header from './components/Header.jsx';
 import UserInput from './components/UserInput.jsx';
 import Results from './components/Results.jsx';
-import { useState } from "react"
+import { useState } from 'react';
+import { useContext } from "react";
+import { ThemeContext } from './context/ThemeContextProvider';
+
 
 function App() {
+  const { theme } = useContext(ThemeContext);
+
   // state to hold user input
- const [userInput, setUserInput]= useState({
+  const [userInput, setUserInput]= useState({
       initialInvestment: 1000,
       annualInvestment: 1200,
       expectedReturn: 4,
@@ -27,16 +32,18 @@ function App() {
 
   return  (
     <>
+      <div className={theme === 'light' ? 'light-theme' : 'dark-theme'}>
       < Header />
-      < UserInput userInput={userInput} onChangeInput={handleChange} />
-      {/* if the input is not valid, show a message */}
-      {!inputIsValid && (
-        <p className="error">
-          Please enter a valid duration (at least 1 year).
-        </p>
-      )}
-      {/* if the input is valid, show the results */}
-      {inputIsValid && < Results input={userInput} />}
+        < UserInput userInput={userInput} onChangeInput={handleChange} />
+        {/* if the input is not valid, show a message */}
+        {!inputIsValid && (
+          <p className="error">
+            Please enter a valid duration (at least 1 year).
+          </p>
+        )}
+        {/* if the input is valid, show the results */}
+        {inputIsValid && < Results input={userInput} />}
+      </div>
     </>
   );
 }
